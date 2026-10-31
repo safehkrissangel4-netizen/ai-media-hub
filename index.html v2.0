@@ -100,7 +100,7 @@
 
 <script>
     // Make sure you have your Hugging Face Token set up in your environment variables
-    const HF_TOKEN = process.env.HF_TOKEN || 'YOUR_FALLBACK_TOKEN_IF_RUNNING_LOCALLY';
+    const HF_TOKEN = process.env.HF_TOKEN || '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';
 
     async function generateType(type) {
         const output = document.getElementById('output-area');
