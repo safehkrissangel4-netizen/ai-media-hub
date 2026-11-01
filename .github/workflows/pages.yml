@@ -307,7 +307,25 @@ Across this series, you built a complete software project and practiced the GitH
 * Go deeper with AI and learn how agents can act like a practical coding partner by turning ideas into small actionable steps, generating examples, and handling repetitive work. For more information, see [Agent capabilities](/en/copilot/concepts/agent-capabilities).
 * Learn more about automating your software projects with GitHub Actions workflows. For more information, see [Understanding GitHub Actions](/en/actions/get-started/understand-github-actions).
 * Add a custom domain or explore more ways to publish your website with GitHub Pages. For more information, see [Getting started with GitHub Pages](/en/pages/getting-started-with-github-pages).
-    # Target architecture for Go to use. Examples: x86, x64. Will use system architecture by default.
+    # Target architecture for Go to use. Examples: x86, x64. Will use sy- name: Cache
+  uses: actions/cache@v5.1.0
+  with:
+    # A list of files, directories, and wildcard patterns to cache and restore
+    path: 
+    # An explicit key for restoring and saving the cache
+    key: 
+    # An ordered multiline string listing the prefix-matched keys, that are used for restoring stale cache if no cache hit occurred for key. Note `cache-hit` returns false in this case.
+    restore-keys: # optional
+    # The chunk size used to split up large files during upload, in bytes
+    upload-chunk-size: # optional
+    # An optional boolean when enabled, allows windows runners to save or restore caches that can be restored or saved respectively on other platforms
+    enableCrossOsArchive: # optional, default is false
+    # Fail the workflow if cache entry is not found
+    fail-on-cache-miss: # optional, default is false
+    # Check if a cache entry exists for the given input(s) (key, restore-keys) without downloading the cache
+    lookup-only: # optional, default is false
+    # Run the post step to save the cache even if another step before fails
+    save-always: # optional, default is falsestem architecture by default.
     architecture: # optional
     # Custom base URL for downloading Go distributions. Use this to download Go from a mirror or custom source. Defaults to "https://go.dev/dl". Can also be set via the GO_DOWNLOAD_BASE_URL environment variable. The input takes precedence over the environment variable.
     go-download-base-url: # optional
